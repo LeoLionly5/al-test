@@ -19,20 +19,20 @@ jobs:
       run: |
         docker-compose --version
 
-    - name: Where am i
-      run: ls -l
-
     - name: Docker compose up
       run: cd ./back-end && sudo docker-compose up -d
 
-    - name: Npm install back
+    - name: Npm install back-end
       run: cd ./back-end && npm install
 
-    - name: Npm start back
+    - name: Npm start back-end
       run: cd ./back-end && npm run start
 
-    - name: test back
+    - name: Test back-end connection
       run: sudo apt install curl && curl http://localhost:3000/
 
-    - name: test initialize DB
+    - name: Test initialize DB
       run: sudo apt install curl && curl http://localhost:3000/api/
+
+    - name: Test GetAllRecipes
+      run: sudo apt install curl && curl http://localhost:3000/api/getAllRecipes
