@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Npm install front-end
-      run: cd ./front-end && npm install && npm install -g @angular/cli
+      run: cd ./front-end && sudo npm install && sudo npm install -g @angular/cli
 
     - name: Npm start front-end
       run: cd ./front-end && ng serve
