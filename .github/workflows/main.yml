@@ -32,7 +32,7 @@ jobs:
       run: sudo apt install curl && curl http://localhost:3000/
 
     - name: Test initialize DB
-      run: sudo apt install curl && curl http://localhost:3000/api/
+      run: curl http://localhost:3000/api/
 
     - name: Test GetAllRecipes
-      run: sudo apt install curl && curl http://localhost:3000/api/getAllRecipes
+      run: curl http://localhost:3000/api/getAllCategories
