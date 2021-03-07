@@ -3,6 +3,7 @@ var should = require("should");
 require('dotenv').config();
 
 var server = supertest.agent("http://localhost:"+process.env.BACKEND_PORT);
+
 describe("SAMPLE unit test", function () {
     it("should work", function (done) {
         server
