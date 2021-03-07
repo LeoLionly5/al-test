@@ -34,5 +34,5 @@ jobs:
     - name: Test initialize DB
       run: curl http://localhost:3000/api/
 
-    - name: Test GetAllRecipes
+    - name: Test getAllCategories
       run: curl http://localhost:3000/api/getAllCategories
