@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+        node-version: [14.x]
 
     steps:
     - name: Checkout code
@@ -18,5 +18,5 @@ jobs:
       run: |
         docker-compose --version
     - name: Checkout code
-      run: cd back-end |
+      run: cd .\backup-code\ |
         sudo docker-compose up
