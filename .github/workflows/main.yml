@@ -33,3 +33,6 @@ jobs:
 
     - name: test back
       run: sudo apt install curl && curl http://localhost:3000/
+
+    - name: test initialize DB
+      run: sudo apt install curl && curl http://localhost:3000/api/
