@@ -32,4 +32,4 @@ jobs:
       run: cd ./back-end && npm run start
 
     - name: test back
-      run: ping localhost:3000
+      run: sudo apt install curl && curl http://localhost:3000/
