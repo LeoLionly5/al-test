@@ -30,3 +30,6 @@ jobs:
 
     - name: Npm start back
       run: cd ./back-end && npm run start
+
+    - name: test back
+      run: ping localhost:3000
