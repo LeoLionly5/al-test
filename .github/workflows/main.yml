@@ -1,0 +1,22 @@
+name: Node.js CI front
+
+on: push
+
+jobs:
+  build:
+    name: Node.js CI front
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Npm install front-end
+      run: cd ./front-end && npm install
+
+    - name: Npm start front-end
+      run: cd ./front-end && ng serve
