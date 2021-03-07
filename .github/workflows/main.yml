@@ -14,14 +14,25 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+
     - name: Environment info
       run: |
         docker-compose --version
+
     - name: Where am i
       run: ls -l
+
     - name: Docker compose up
       run: cd ./back-end && sudo docker-compose up -d
+
+    - name: Where am i
+      run: ls -l
+
     - name: Npm install back
-      run: npm install
+      run: cd ./back-end && npm install
+
+    - name: Where am i
+      run: ls -l
+
     - name: Npm start back
-      run: npm run start
+      run: cd ./back-end && npm run start
