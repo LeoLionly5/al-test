@@ -8,6 +8,10 @@ const dbConnection = require('./middlewares/mysql');
 const bodyParser = require('body-parser');
 const app = express();
 dbConnection.connect();
+dbConnection.on('error',err=>{
+        console.log('Re-connecting lost connection: ');
+        dbConnection.connect();
+    })
 var allowCrossDomain = function (req, res, next){
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
