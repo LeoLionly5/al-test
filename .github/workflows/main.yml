@@ -19,3 +19,5 @@ jobs:
         docker-compose --version
     - name: Where am i
       run: ls -l
+    - name: Docker compose up
+      run: sudo cd back-end | sudo docker-compose up
