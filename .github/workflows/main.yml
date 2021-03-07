@@ -28,11 +28,5 @@ jobs:
     - name: Npm start back-end
       run: cd ./back-end && npm run start
 
-    - name: Test back-end connection
-      run: sudo apt install curl && curl http://localhost:3000/
-
-    - name: Test initialize DB
-      run: curl http://localhost:3000/api/
-
-    - name: Test getAllCategories
-      run: curl http://localhost:3000/api/getAllCategories
+    - name: Run back test
+      run: npm run test
