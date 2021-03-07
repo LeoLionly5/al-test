@@ -3,11 +3,11 @@
 require('dotenv').config();
 const express = require('express');
 const Router = require('./routes/api');
-const dbConnection() = require('./middlewares/mysql');
+const dbConnection = require('./middlewares/mysql');
 // const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
-dbConnection();
+dbConnection.connect();
 var allowCrossDomain = function (req, res, next){
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
